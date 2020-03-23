@@ -10,11 +10,18 @@ import UIKit
 
 class BeerViewCell: UITableViewCell {
 
-    @IBOutlet weak var labelName: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var descriotionLabel: UILabel!
+    @IBOutlet weak var imageBeer: UIImageView!
+    
     
     public var cellBeer : BeerEntity! {
         didSet {
-            self.labelName.text = "\(cellBeer.id).\(cellBeer.name)"
+            self.titleLabel.text = cellBeer.name
+            self.descriotionLabel.text = cellBeer.description
+            
+            let url = URL(string: cellBeer.imageUrl)
+            self.imageBeer.load(url: url!)
         }
     }
     
