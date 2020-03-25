@@ -31,6 +31,8 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "Punk Api"
+        
         beerListViewModel
             .beersChannel
             .observeOn(MainScheduler.instance)

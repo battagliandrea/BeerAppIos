@@ -15,6 +15,11 @@ class BeersTableViewVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    private lazy var beerDetailsVC: BeerDetailsVC = {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        return storyboard.instantiateViewController(withIdentifier: "BeerDetailsVC") as! BeerDetailsVC
+    }()
+    
     public var beers = PublishSubject<[BeerEntity]>()
     
     private let disposeBag = DisposeBag()
@@ -29,9 +34,19 @@ class BeersTableViewVC: UIViewController {
         
         tableView.register(UINib(nibName: "BeerViewCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
 
+        tableView.rx.modelSelected(BeerEntity.self)
+              .bind { (item) in
+                  self.beerDetailsVC.beer.onNext(item)
+                  self.present(self.beerDetailsVC, animated: true, completion: nil)
+              }
+              .disposed(by: disposeBag)
+        
         beers.bind(to: tableView.rx.items(cellIdentifier: "ReusableCell", cellType: BeerViewCell.self)) {  (row,item,cell) in
             cell.cellBeer = item
         }.disposed(by: disposeBag)
+        
+
+        
 
 //        tableView.rx.willDisplayCell
 //            .subscribe(onNext: ({ (cell,indexPath) in

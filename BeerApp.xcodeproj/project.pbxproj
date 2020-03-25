@@ -20,6 +20,7 @@
 		658B67522427D2DB00637AC2 /* BeerViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B67502427D2DB00637AC2 /* BeerViewCell.swift */; };
 		658B67532427D2DB00637AC2 /* BeerViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 658B67512427D2DB00637AC2 /* BeerViewCell.xib */; };
 		658B67592427D6EF00637AC2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B67582427D6EF00637AC2 /* Extensions.swift */; };
+		65EB3FCA242B9C86000E7AB6 /* BeerDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EB3FC9242B9C86000E7AB6 /* BeerDetailsVC.swift */; };
 		8E19E35BFE1026CB6489614B /* Pods_BeerApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E9C159A8F5E59681781DBE2 /* Pods_BeerApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +43,7 @@
 		658B67502427D2DB00637AC2 /* BeerViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerViewCell.swift; sourceTree = "<group>"; };
 		658B67512427D2DB00637AC2 /* BeerViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerViewCell.xib; sourceTree = "<group>"; };
 		658B67582427D6EF00637AC2 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		65EB3FC9242B9C86000E7AB6 /* BeerDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				656EF19F2426A8480033AF21 /* Main.storyboard */,
 				656EF19D2426A8480033AF21 /* HomeVC.swift */,
 				6584990B242AC1340022DE1D /* BeersTableViewVC.swift */,
+				65EB3FC9242B9C86000E7AB6 /* BeerDetailsVC.swift */,
 				658B674F2427D2B600637AC2 /* BeerCell */,
 			);
 			path = View;
@@ -286,6 +289,7 @@
 			files = (
 				656EF19E2426A8480033AF21 /* HomeVC.swift in Sources */,
 				658B67592427D6EF00637AC2 /* Extensions.swift in Sources */,
+				65EB3FCA242B9C86000E7AB6 /* BeerDetailsVC.swift in Sources */,
 				658B674C2427B44500637AC2 /* BeerData.swift in Sources */,
 				656EF19A2426A8480033AF21 /* AppDelegate.swift in Sources */,
 				658B67482427AEAE00637AC2 /* BeerEntity.swift in Sources */,
