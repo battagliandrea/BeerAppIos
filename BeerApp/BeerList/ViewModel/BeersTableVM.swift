@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 import Alamofire
 
-class BeerListViewModel {
+class BeersTableVM {
     
     let beerListURL = "https://api.punkapi.com/v2/beers"
     
